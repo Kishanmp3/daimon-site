@@ -1,0 +1,79 @@
+.install-section {
+  padding: 120px 32px;
+  border-top: 1px solid var(--border);
+}
+
+.install-inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.install-blocks {
+  margin-bottom: 32px;
+}
+
+.install-block-row {
+  margin-bottom: 16px;
+}
+
+.install-os {
+  font-family: var(--font-display);
+  font-size: 12px;
+  color: var(--secondary);
+  display: block;
+  margin-bottom: 8px;
+  letter-spacing: 0.05em;
+}
+
+.install-code-row {
+  display: flex;
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 14px 16px;
+  gap: 12px;
+}
+
+.install-code {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--white);
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.install-copy {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--secondary);
+  background: none;
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.install-copy:hover {
+  color: var(--amber);
+  border-color: var(--amber);
+}
+
+.install-note {
+  font-family: var(--font-display);
+  font-size: 13px;
+  color: var(--secondary);
+}
+
+.install-link {
+  color: var(--amber);
+  text-decoration: underline;
+  text-decoration-color: rgba(245, 158, 11, 0.4);
+}
+
+.install-link:hover {
+  text-decoration-color: var(--amber);
+}
