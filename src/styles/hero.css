@@ -8,13 +8,13 @@
 }
 
 .hero-inner {
-  max-width: 1280px;
+  max-width: min(1400px, 92vw);
   width: 100%;
   margin: 0 auto;
-  padding: 80px 32px;
+  padding: clamp(40px, 6vh, 80px) clamp(20px, 3vw, 48px);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 48px;
+  gap: clamp(24px, 4vw, 72px);
   align-items: center;
 }
 
@@ -31,7 +31,7 @@
 .hero-title {
   font-family: var(--font-display);
   font-weight: 900;
-  font-size: clamp(80px, 10vw, 140px);
+  font-size: clamp(60px, 8vw, 140px);
   line-height: 0.9;
   letter-spacing: -4px;
   color: var(--white);
@@ -40,10 +40,10 @@
 
 .hero-sub {
   font-family: var(--font-display);
-  font-size: 18px;
+  font-size: clamp(15px, 1.4vw, 18px);
   color: var(--secondary);
   line-height: 1.6;
-  max-width: 440px;
+  max-width: min(440px, 100%);
   margin-bottom: 40px;
 }
 
@@ -51,6 +51,7 @@
   display: flex;
   gap: 12px;
   margin-bottom: 32px;
+  flex-wrap: wrap;
 }
 
 .btn-primary {
@@ -101,7 +102,8 @@
   justify-content: space-between;
   gap: 12px;
   margin-bottom: 32px;
-  max-width: 520px;
+  max-width: min(520px, 100%);
+  min-width: 0;
 }
 
 .install-cmd {
@@ -111,6 +113,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  min-width: 0;
 }
 
 .copy-btn-hero {
@@ -140,19 +143,27 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 500px;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  min-height: 0;
 }
 
-@media (max-width: 900px) {
+/* Mobile: single column, eye above text */
+@media (max-width: 768px) {
   .hero-inner {
     grid-template-columns: 1fr;
+    padding: clamp(24px, 5vw, 48px) clamp(16px, 5vw, 32px);
+    gap: 32px;
   }
 
   .hero-right {
-    height: 340px;
+    order: -1;
+    width: min(320px, 80vw);
+    margin: 0 auto;
   }
 
   .hero-title {
-    font-size: 80px;
+    font-size: clamp(52px, 15vw, 80px);
+    letter-spacing: -2px;
   }
 }
